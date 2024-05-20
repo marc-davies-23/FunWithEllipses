@@ -71,12 +71,12 @@ class Ellipse:
             return x, y
 
         # First we must translate the coordinates so that they consider the ellipse's centre to be (0, 0).
-        o_x = x - self.o[0]
-        o_y = y - self.o[1]
+        x_o = x - self.o[0]
+        y_o = y - self.o[1]
 
         # Now we apply the rotation matrix
-        x_r = o_x * math.cos(self.theta) - o_y * math.sin(self.theta)
-        y_r = o_x * math.sin(self.theta) + o_y * math.cos(self.theta)
+        x_r = x_o * math.cos(self.theta) - y_o * math.sin(self.theta)
+        y_r = x_o * math.sin(self.theta) + y_o * math.cos(self.theta)
 
         # Finally we map them back to pixel coordinates
         return x_r + self.o[0], y_r + self.o[1]
