@@ -27,7 +27,7 @@ import math
 
 DEBUG = False
 
-# Allow a tolerance as we're dealing with pixels (int) being transformed to floats. The higher this is, the
+# Allow a tolerance as we're dealing with display pixels (int) showing things measured in floats this, the
 # thicker the drawn line. 0.00 will mean only a few points will exactly match the line; 0.01 is 1 or 2 pixels thick.
 DEFAULT_TOLERANCE = 0.01
 
